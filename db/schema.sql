@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS basketblog;
+DROP DATABASE IF EXISTS basketblog_db;
 
-CREATE DATABASE basketblog;
+CREATE DATABASE basketblog_db;

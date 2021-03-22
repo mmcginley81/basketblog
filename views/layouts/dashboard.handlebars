@@ -1,0 +1,31 @@
+<ol class="post-list">
+  {{#if post.length}}
+      {{#each posts}}
+  <li>
+    <article class="post">
+      <div class="title">
+        <a href="{{post_text}}" target="_blank">{{title}}</a>
+        <span>({{post_text}})</span>
+      </div>
+      <div class="meta">
+        Created by {{user.username}} on
+        {{created_at}}
+        |
+        <a href="/post/{{id}}">{{comments.length}}</a>
+      </div>
+    </article>
+  </li>
+  
+  {{/each}}
+    
+
+  {{else}}
+<h1>No posts......</h1>
+
+
+  {{/if}}
+</ol>
+{{{body}}}
+<footer class="footer flex-row justify-center">
+    <a href="/dashboard/new-post">:heavy_plus_sign: New Post</a>
+</footer>
