@@ -2,12 +2,15 @@
 {{#each post}}
 <article class="post">
   <div class="title">
-    <a href="{{post_text}}" target="_blank">{{title}}</a>
+    <a href="{{title}}" target="_blank">{{title}}</a>
   </div>
   <div class="meta">
-    by {{user.username}} on 
+    by {{user.user_id}} on 
     |
-    <a href="/post/{{id}}">{{comments.length}}</a>
+    <a href="/post/{{id}}">comments{{comments.length}}</a>
+  </div>
+  <div>
+      {{post_text}}
   </div>
 </article>
 {{/each}}
