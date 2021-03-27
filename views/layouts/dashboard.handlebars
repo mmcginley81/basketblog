@@ -1,3 +1,21 @@
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="/">Home</a> </li>
+                <li> <a href="/dashboard">Dashboard</a> </li>
+                <li> <a href="/logout">Logout</a> </li>
+
+                
+            </ul>
+            
+        </nav>
+        <div>
+            <h2>
+                <a href="#">Basketblog</a>
+            </h2>
+        </div>
+    </header>
+<body>
 <ol class="post-list">
   {{#if post.length}}
       {{#each posts}}
@@ -9,9 +27,12 @@
       </div>
       <div class="meta">
         Created by {{user.username}} on
-        {{created_at}}
+        {{createdAt}}
         |
-        <a href="/post/{{id}}">{{comments.length}}</a>
+        <a href="dashboard/{{post.id}}">{{comments.length}}Comments</a>
+      </div>
+      <div>
+        {{> comments}}
       </div>
     </article>
   </li>
@@ -25,7 +46,14 @@
 
   {{/if}}
 </ol>
+
 {{{body}}}
+<br>
+<a href="/dashboard/update-post">Update Post</a>
+</br>
+<br>
 <footer class="footer flex-row justify-center">
-    <a href="/dashboard/new-post">:heavy_plus_sign: New Post</a>
+    <a href="/dashboard/new-post">New Post</a>
 </footer>
+</br>
+</body>
